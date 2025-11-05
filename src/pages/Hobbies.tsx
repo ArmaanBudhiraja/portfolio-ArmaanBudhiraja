@@ -1,18 +1,24 @@
 import { Card } from '@/components/ui/card';
-import { Gamepad2, Music, Camera, Coffee, Book, Dumbbell } from 'lucide-react';
+import { Gamepad2, Music, Camera, Coffee, Book, Dumbbell, Mic2, Drama, Pencil, LucideShirt } from 'lucide-react';
 
 export const Hobbies = () => {
   const hobbies = [
     {
-      icon: <Gamepad2 className="w-12 h-12" />,
-      title: 'Gaming',
-      description: 'Exploring virtual worlds and competitive gaming. RPGs and strategy games are my favorites.',
+      icon: <Pencil className="w-12 h-12" />,
+      title: 'Sketching',
+      description: 'Some feelings are hard to put into words, so I express them through my sketches.',
+      color: 'glow-cyan',
+    },
+    {
+      icon: <LucideShirt className="w-12 h-12" />,
+      title: 'Fashion',
+      description: 'Exploring the art of self-expression and confidence through fashion and styling.',
       color: 'glow-cyan',
     },
     {
       icon: <Music className="w-12 h-12" />,
-      title: 'Music Production',
-      description: 'Creating electronic beats and experimenting with synthesizers in my home studio.',
+      title: 'Music',
+      description: 'Listening to a diverse range of music, from energetic Desi beats to soothing French melodies.',
       color: 'glow-magenta',
     },
     {
@@ -22,21 +28,15 @@ export const Hobbies = () => {
       color: 'glow-green',
     },
     {
-      icon: <Coffee className="w-12 h-12" />,
-      title: 'Coffee Brewing',
-      description: 'Mastering different brewing methods and exploring specialty coffee beans from around the world.',
-      color: 'glow-cyan',
-    },
-    {
-      icon: <Book className="w-12 h-12" />,
-      title: 'Reading Sci-Fi',
-      description: 'Diving into futuristic worlds and mind-bending concepts through science fiction novels.',
+      icon: <Mic2 className="w-12 h-12" />,
+      title: 'Anchoring',
+      description: 'Bringing stories to life and connecting with audiences through the art of anchoring.',
       color: 'glow-magenta',
     },
     {
-      icon: <Dumbbell className="w-12 h-12" />,
-      title: 'Fitness',
-      description: 'Staying active with weightlifting, running, and exploring new workout routines.',
+      icon: <Drama className="w-12 h-12" />,
+      title: 'Dramatics',
+      description: 'Expressing emotions and exploring characters through the captivating world of theatre',
       color: 'glow-green',
     },
   ];
@@ -57,7 +57,7 @@ export const Hobbies = () => {
               key={index}
               className="p-8 space-y-4 border-2 hover:shadow-[0_0_30px_rgba(0,255,255,0.3)] transition-all hover:scale-105"
             >
-              <div className={`text-primary ${hobby.color}`}>{hobby.icon}</div>
+              <div className={`text-gray ${hobby.color}`}>{hobby.icon}</div>
               <h3 className="text-2xl font-bold">{hobby.title}</h3>
               <p className="text-muted-foreground">{hobby.description}</p>
             </Card>

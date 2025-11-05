@@ -6,34 +6,34 @@ export const Gallery = () => {
 
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
+      url: './sketch2.png',
       title: 'Abstract Art',
-      category: 'Digital',
+      category: 'Art',
     },
     {
-      url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-      title: 'Mountain Vista',
+      url: './castle.jpg',
+      title: 'Shimla Palace',
       category: 'Photography',
     },
     {
-      url: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&h=600&fit=crop',
-      title: 'Gradient Dreams',
-      category: 'Digital',
+      url: './sketch1.png',
+      title: 'Potrait Sketch',
+      category: 'Art',
     },
     {
-      url: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
-      title: 'Ocean Waves',
+      url: './anchoring1.jpg',
+      title: 'Niewbie Fiesta',
+      category: 'Anchoring',
+    },
+    {
+      url: './palace.jpg',
+      title: 'Mysore Palace',
       category: 'Photography',
     },
     {
-      url: 'https://images.unsplash.com/photo-1557264337-e8a93017fe92?w=800&h=600&fit=crop',
-      title: 'Neon Nights',
-      category: 'Urban',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1550684376-efcbd6e3f031?w=800&h=600&fit=crop',
-      title: 'Cosmic Journey',
-      category: 'Digital',
+      url: './anchoring2.jpg',
+      title: 'IGCAR Event',
+      category: 'Anchoring',
     },
   ];
 

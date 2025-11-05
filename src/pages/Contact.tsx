@@ -6,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from 'sonner';
+import emailjs from 'emailjs-com';
+
 
 export const Contact = () => {
   const { mode } = useMode();
@@ -16,10 +18,33 @@ export const Contact = () => {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success('Message sent! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+  e.preventDefault();
+
+  const templateParams = {
+    from_name: formData.name,
+    from_email: formData.email,
+    message: formData.message,
   };
+
+  emailjs
+    .send(
+      'service_0o48ypc',
+      'template_9jaasye',
+      templateParams,
+      'R9ISRcTkJ-NzmTxvA'
+    )
+    .then(
+      (response) => {
+        toast.success("Message sent! I'll get back to you soon.");
+        setFormData({ name: '', email: '', message: '' });
+      },
+      (error) => {
+        console.error('FAILED...', error);
+        toast.error('Something went wrong. Please try again.');
+      }
+    );
+};
+
 
   return (
     <div className="container mx-auto px-4 py-20">
@@ -42,7 +67,7 @@ export const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className={`p-3 rounded-lg bg-primary/10 ${mode === 'chaotic' ? 'glow-cyan' : ''}`}>
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Mail className="w-5 h-5 text" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
@@ -52,7 +77,7 @@ export const Contact = () => {
 
               <div className="flex items-center gap-4">
                 <div className={`p-3 rounded-lg bg-primary/10 ${mode === 'chaotic' ? 'glow-magenta' : ''}`}>
-                  <Phone className="w-5 h-5 text-primary" />
+                  <Phone className="w-5 h-5 text" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
@@ -62,7 +87,7 @@ export const Contact = () => {
 
               <div className="flex items-center gap-4">
                 <div className={`p-3 rounded-lg bg-primary/10 ${mode === 'chaotic' ? 'glow-green' : ''}`}>
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPin className="w-5 h-5 text" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
@@ -102,7 +127,7 @@ export const Contact = () => {
               </div>
               <Button
                 type="submit"
-                className={`w-full gap-2 ${mode === 'chaotic' ? 'glow-cyan' : ''}`}
+                className={`w-full gap-2 ${mode === 'chaotic' ? 'glow-cyan text-cyan' : ''}`}
               >
                 <Send className="w-4 h-4" />
                 Send Message
@@ -114,3 +139,7 @@ export const Contact = () => {
     </div>
   );
 };
+
+//service_0o48ypc
+//template_9jaasye
+//R9ISRcTkJ-NzmTxvA

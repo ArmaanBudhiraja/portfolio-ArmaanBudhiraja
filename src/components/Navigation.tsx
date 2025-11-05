@@ -1,16 +1,19 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useMode } from '@/contexts/ModeContext';
 import { Button } from './ui/button';
 import { Sparkles, Briefcase } from 'lucide-react';
+import path from 'path';
 
 export const Navigation = () => {
   const { mode, toggleMode } = useMode();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const professionalLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/skills', label: 'Skills' },
+    { path: '/responsibilities', label: 'Responsibility' },
     { path: '/projects', label: 'Projects' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -24,6 +27,11 @@ export const Navigation = () => {
 
   const links = mode === 'professional' ? professionalLinks : chaoticLinks;
 
+  const handleToggle = () => {
+    toggleMode();
+    navigate('/'); 
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border mode-transition">
       <div className="container mx-auto px-4 py-4">
@@ -33,7 +41,7 @@ export const Navigation = () => {
               {mode === 'professional' ? (
                 <span className="text-primary">Portfolio</span>
               ) : (
-                <span className="glow-cyan text-primary">CH∆OS</span>
+                <span className="glow-cyan text-cyan">CH∆OS</span>
               )}
             </Link>
             
@@ -44,9 +52,9 @@ export const Navigation = () => {
                   to={link.path}
                   className={`text-sm font-medium transition-all hover:text-primary ${
                     location.pathname === link.path
-                      ? 'text-primary font-semibold'
-                      : 'text-foreground/70'
-                  } ${mode === 'chaotic' && location.pathname === link.path ? 'glow-cyan' : ''}`}
+                      ? 'text-primary font-semibold '
+                      : 'text-foreground/80 hover:text-gray-400'
+                  } ${mode === 'chaotic' && location.pathname === link.path ? ' glow-cyan text-white hover:text-gray-400' : ''}`}
                 >
                   {link.label}
                 </Link>
@@ -55,11 +63,11 @@ export const Navigation = () => {
           </div>
 
           <Button
-            onClick={toggleMode}
-            variant="outline"
+            onClick={handleToggle}
+            variant="outline2"
             size="sm"
             className={`gap-2 mode-transition ${
-              mode === 'chaotic' ? 'border-primary glow-cyan' : ''
+              mode === 'chaotic' ? 'border-white glow-cyan text-white hover:bg-white hover:text-black' : ''
             }`}
           >
             {mode === 'professional' ? (
@@ -85,8 +93,8 @@ export const Navigation = () => {
               className={`text-sm font-medium whitespace-nowrap transition-all hover:text-primary ${
                 location.pathname === link.path
                   ? 'text-primary font-semibold'
-                  : 'text-foreground/70'
-              } ${mode === 'chaotic' && location.pathname === link.path ? 'glow-cyan' : ''}`}
+                  : 'text-foreground/80 hover:text-gray-400'
+              } ${mode === 'chaotic' && location.pathname === link.path ? 'glow-cyan text-white hover:text-gray-400' : ''}`}
             >
               {link.label}
             </Link>
