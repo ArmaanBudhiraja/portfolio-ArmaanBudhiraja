@@ -1,17 +1,19 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { styleText } from 'util';
+
 
 export const ProfessionalHome = () => {
   return (
     <div className="container mx-auto px-4 py-20">
       <div className="max-w-4xl mx-auto">
         <div className="text-center space-y-8 animate-fade-in">
-          <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
-            Hi, I'm <span className="text-primary">Your Name</span>
+          <h1 className="text-6xl md:text-7xl font-bold tracking-tight" style ={{color: 'grey', textAlign: 'left',marginLeft: '136px'}}>
+            Hi, I'm <div><span className="text-primary">Armaan Budhiraja</span></div>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto" style={{ textAlign: 'left', marginLeft: '136px', color: 'grey' }}>
             A passionate developer crafting elegant solutions to complex problems
           </p>
 
@@ -22,16 +24,17 @@ export const ProfessionalHome = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline2" size="lg">
               <Link to="/contact">
                 Get In Touch
               </Link>
             </Button>
           </div>
+          
 
           <div className="flex items-center justify-center gap-6 pt-12">
             <a
-              href="https://github.com"
+              href="https://github.com/ArmaanBudhiraja"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -39,7 +42,7 @@ export const ProfessionalHome = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/armaanbudhiraja/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -47,26 +50,17 @@ export const ProfessionalHome = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:your@email.com"
+              href="mailto:armaanbudhiraja88503@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-6 h-6" />
             </a>
+            <a href="https://drive.google.com/file/d/1LJjNSnyL_a4nc7TLClHsXVzHWaIJmoob/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline2">Resume</Button>
+            </a>
           </div>
-        </div>
-
-        <div className="mt-32 grid md:grid-cols-3 gap-8">
-          <div className="text-center space-y-2 p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-            <h3 className="text-4xl font-bold text-primary">5+</h3>
-            <p className="text-muted-foreground">Years Experience</p>
-          </div>
-          <div className="text-center space-y-2 p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-            <h3 className="text-4xl font-bold text-primary">50+</h3>
-            <p className="text-muted-foreground">Projects Completed</p>
-          </div>
-          <div className="text-center space-y-2 p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-shadow">
-            <h3 className="text-4xl font-bold text-primary">20+</h3>
-            <p className="text-muted-foreground">Happy Clients</p>
+          <div>
+            
           </div>
         </div>
       </div>

@@ -7,33 +7,33 @@ export const Projects = () => {
     {
       title: 'E-Commerce Platform',
       description: 'A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=500&fit=crop',
-      github: 'https://github.com',
+      tags: ['React', 'Node.js', 'PostgreSQL', 'Express'],
+      image: './Sneaker_shop.png',
+      github: 'https://github.com/ArmaanBudhiraja/full-stack-awesome-sneakers',
       live: 'https://example.com',
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates, team features, and smart notifications.',
-      tags: ['React', 'Firebase', 'TypeScript', 'Material-UI'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=500&fit=crop',
-      github: 'https://github.com',
+      title: 'V-Graph',
+      description: 'Visual automation tool inspired by n8n. Drag-and-drop workflow editor with dynamic node execution and data flow visualization.',
+      tags: ['NextJs', 'LangGraph', 'Kafka', 'GenAI'],
+      image: './vgraph.jpg',
+      github: 'https://github.com/ArmaanBudhiraja/v-graphs',
       live: 'https://example.com',
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for tracking social media metrics across multiple platforms with beautiful visualizations.',
-      tags: ['Next.js', 'Chart.js', 'REST APIs', 'Tailwind'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+      title: 'Fx-Anomoly-Detection',
+      description: 'A real-time streaming pipeline for detecting anomalies in foreign exchange (FX) trade data using Apache Spark and Kafka.',
+      tags: ['Python', 'HTML', 'Apache Spark', 'Kafka'],
+      image: './fx.webp',
       github: 'https://github.com',
       live: 'https://example.com',
     },
     {
       title: 'Weather Forecast App',
       description: 'Beautiful weather application with location-based forecasts, interactive maps, and weather alerts.',
-      tags: ['React', 'OpenWeather API', 'Leaflet', 'Redux'],
+      tags: ['Python', 'OpenWeatherMap API', 'Tkinter'],
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop',
-      github: 'https://github.com',
+      github: 'https://github.com/ArmaanBudhiraja/Weather-app',
       live: 'https://example.com',
     },
   ];
@@ -70,7 +70,7 @@ export const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-4 pt-4">
-                  <Button variant="outline" size="sm" className="gap-2" asChild>
+                  <Button variant="outline2" size="sm" className="gap-2" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4" />
                       Code

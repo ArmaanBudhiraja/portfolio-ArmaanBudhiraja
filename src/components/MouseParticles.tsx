@@ -68,10 +68,10 @@ export const MouseParticles = () => {
           const hue = (particle.x + particle.y) % 360;
           ctx.fillStyle = `hsla(${hue}, 100%, 50%, ${alpha})`;
           ctx.shadowBlur = 10;
-          ctx.shadowColor = `hsla(${hue}, 100%, 50%, ${alpha})`;
+          ctx.shadowColor = `hsla(${hue}, 50%, 50%, ${alpha})`;
         } else {
           // Subtle blue for professional mode
-          ctx.fillStyle = `hsla(210, 100%, 45%, ${alpha * 0.6})`;
+          ctx.fillStyle = `hsla(0, 100%, 5%, ${alpha * 0.6})`;
           ctx.shadowBlur = 5;
           ctx.shadowColor = `hsla(210, 100%, 45%, ${alpha * 0.3})`;
         }

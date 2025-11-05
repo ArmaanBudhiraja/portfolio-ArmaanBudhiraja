@@ -6,17 +6,17 @@ export const Skills = () => {
     {
       icon: <Code className="w-8 h-8" />,
       title: 'Frontend Development',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Vue.js'],
+      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Vue.js', 'Flutter', 'Django'],
     },
     {
       icon: <Server className="w-8 h-8" />,
       title: 'Backend Development',
-      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs'],
+      skills: ['Node.js', 'SQL', 'MongoDB', 'REST APIs'],
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: 'Database & Cloud',
-      skills: ['AWS', 'Google Cloud', 'Docker', 'Kubernetes', 'CI/CD'],
+      skills: ['AWS', 'Google Cloud', 'Docker', 'Vercel'],
     },
     {
       icon: <Layout className="w-8 h-8" />,
@@ -25,13 +25,13 @@ export const Skills = () => {
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: 'Mobile Development',
-      skills: ['React Native', 'Flutter', 'iOS', 'Android', 'Progressive Web Apps'],
+      title: 'Languages',
+      skills: ['Python','C','C++','Java','HTML','CSS','JavaScript','TypeScript','Bash/Shell Scripting'],
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Tools & Methodologies',
-      skills: ['Git', 'Agile', 'Scrum', 'Jest', 'Testing Library'],
+      skills: ['Git','VSCode','PostgreSQL','Postman','Prisma'],
     },
   ];
 

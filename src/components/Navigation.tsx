@@ -65,12 +65,12 @@ export const Navigation = () => {
             {mode === 'professional' ? (
               <>
                 <Sparkles className="w-4 h-4" />
-                Go Chaotic
+                Chaotic
               </>
             ) : (
               <>
                 <Briefcase className="w-4 h-4" />
-                Go Professional
+                Professional
               </>
             )}
           </Button>
