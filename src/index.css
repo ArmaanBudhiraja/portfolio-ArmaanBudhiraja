@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Professional Mode - Light & Clean */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Professional specific colors */
+    --professional-bg: 0 0% 100%;
+    --professional-text: 220 20% 15%;
+    --professional-accent: 210 100% 45%;
+    --professional-muted: 220 10% 95%;
+  }
+
+  .chaotic {
+    /* Chaotic Mode - Dark & Vibrant */
+    --background: 240 10% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 240 10% 5%;
+
+    --secondary: 300 100% 50%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 240 8% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 120 100% 50%;
+    --accent-foreground: 240 10% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 8% 15%;
+    --input: 240 8% 15%;
+    --ring: 180 100% 50%;
+
+    /* Chaotic specific colors */
+    --chaotic-bg: 240 10% 5%;
+    --chaotic-text: 0 0% 95%;
+    --chaotic-cyan: 180 100% 50%;
+    --chaotic-magenta: 300 100% 50%;
+    --chaotic-green: 120 100% 50%;
+    --chaotic-purple: 270 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-500;
+  }
+
+  /* Smooth transitions for mode switching */
+  .mode-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  /* Glow effects for chaotic mode */
+  .glow-cyan {
+    text-shadow: 0 0 10px hsl(180 100% 50% / 0.5), 0 0 20px hsl(180 100% 50% / 0.3);
+  }
+  
+  .glow-magenta {
+    text-shadow: 0 0 10px hsl(300 100% 50% / 0.5), 0 0 20px hsl(300 100% 50% / 0.3);
+  }
+  
+  .glow-green {
+    text-shadow: 0 0 10px hsl(120 100% 50% / 0.5), 0 0 20px hsl(120 100% 50% / 0.3);
+  }
+
+  /* Gradient backgrounds */
+  .gradient-professional {
+    background: linear-gradient(135deg, hsl(210 100% 97%) 0%, hsl(210 100% 90%) 100%);
+  }
+
+  .gradient-chaotic {
+    background: linear-gradient(135deg, hsl(240 10% 5%) 0%, hsl(270 20% 10%) 100%);
+  }
+}
