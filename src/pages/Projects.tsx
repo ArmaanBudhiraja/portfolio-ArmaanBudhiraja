@@ -10,7 +10,6 @@ export const Projects = () => {
       tags: ['React', 'Node.js', 'PostgreSQL', 'Express'],
       image: './Sneaker_shop.png',
       github: 'https://github.com/ArmaanBudhiraja/full-stack-awesome-sneakers',
-      live: 'https://example.com',
     },
     {
       title: 'V-Graph',
@@ -18,7 +17,6 @@ export const Projects = () => {
       tags: ['NextJs', 'LangGraph', 'Kafka', 'GenAI'],
       image: './vgraph.jpg',
       github: 'https://github.com/ArmaanBudhiraja/v-graphs',
-      live: 'https://example.com',
     },
     {
       title: 'Fx-Anomoly-Detection',
@@ -26,7 +24,6 @@ export const Projects = () => {
       tags: ['Python', 'HTML', 'Apache Spark', 'Kafka'],
       image: './fx.webp',
       github: 'https://github.com',
-      live: 'https://example.com',
     },
     {
       title: 'Weather Forecast App',
@@ -34,7 +31,6 @@ export const Projects = () => {
       tags: ['Python', 'OpenWeatherMap API', 'Tkinter'],
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop',
       github: 'https://github.com/ArmaanBudhiraja/Weather-app',
-      live: 'https://example.com',
     },
   ];
 
@@ -74,12 +70,6 @@ export const Projects = () => {
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4" />
                       Code
-                    </a>
-                  </Button>
-                  <Button size="sm" className="gap-2" asChild>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
                     </a>
                   </Button>
                 </div>
