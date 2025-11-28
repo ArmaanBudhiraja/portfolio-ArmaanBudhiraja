@@ -18,10 +18,43 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+import { TypewriterIntro } from "@/components/TypewriterIntro";
+import { useState } from "react";
+
 const HomePage = () => {
   const { mode } = useMode();
-  return mode === 'professional' ? <ProfessionalHome /> : <ChaoticHome />;
+
+  // Read localStorage once on mount
+  const [introDone, setIntroDone] = useState(() => {
+    const played = localStorage.getItem("introPlayed");
+    return played === "true"; // If true → skip intro
+  });
+
+  function handleIntroComplete() {
+    localStorage.setItem("introPlayed", "true");
+    setIntroDone(true);
+  }
+
+  return (
+    <>
+      {/* Intro only if NOT played before */}
+      {!introDone && <TypewriterIntro onComplete={handleIntroComplete} />}
+
+      {/* Homepage wrapper (blur initially only if intro playing) */}
+      <div
+        id="app-page-wrapper"
+        className={
+          introDone
+            ? "transition-all duration-700 opacity-100"
+            : "transition-all duration-700 opacity-0 "
+        }
+      >
+        {mode === "professional" ? <ProfessionalHome /> : <ChaoticHome />}
+      </div>
+    </>
+  );
 };
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

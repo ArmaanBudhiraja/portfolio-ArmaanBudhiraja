@@ -14,7 +14,7 @@ export const ProfessionalHome = () => {
           >
             Hi, I'm
             <div>
-              <span className="text-primary">Armaan Budhiraja</span>
+              <span id="final-name" className="text-primary inline-block" style={{ display: "inline-block" }}>Armaan Budhiraja</span>
             </div>
           </h1>
 

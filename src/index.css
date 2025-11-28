@@ -124,3 +124,53 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(240 10% 5%) 0%, hsl(270 20% 10%) 100%);
   }
 }
+
+/* ---------- Typewriter (fixed width using ch units) ---------- */
+/* Count the characters in "Armaan Budhiraja" = 16 (6 + 1 + 9) */
+/* If you later change the text, update the CH_COUNT variable below. */
+
+:root {
+  --TYPE_CH_COUNT: 12.3ch; /* adjust if the name text changes */
+}
+
+/* Stable, measurable typewriter */
+.typewriter {
+  display: inline-block;
+  box-sizing: content-box;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* caret */
+  border-right: 3px solid currentColor;
+
+  /* animate width from 0ch to the exact character count */
+  width: 0ch;
+  animation:
+    typing 2.8s steps(16, end) forwards, /* steps = number of characters */
+    blink 0.75s step-end infinite;
+  /* optional glow/drop-shadow */
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.08));
+}
+
+/* end state helper (in case we remove the class) */
+.typewriter-static {
+  animation: none !important;
+  border-right: none !important;
+  width: auto !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+@keyframes typing {
+  from { width: 0ch; }
+  to   { width: var(--TYPE_CH_COUNT); } /* final width = 16ch */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* small helper used by the intro container for background fade */
+.intro-bg {
+  background-color: rgba(0,0,0,0.0); /* keep transparent, blur is via backdrop-blur on container */
+}
