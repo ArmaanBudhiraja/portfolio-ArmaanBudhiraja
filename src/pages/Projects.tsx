@@ -32,6 +32,13 @@ export const Projects = () => {
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop',
       github: 'https://github.com/ArmaanBudhiraja/Weather-app',
     },
+    {
+      title: 'Frostbound-Runner',
+      description: 'Frostbound Run is a Python-based 2D platformer developed using Pygame. The project demonstrates game physics, sprite animation, enemy state management, projectile combat, level loading via JSON, and cross-platform deployment using PyInstaller.',
+      tags: ['Pygame', 'Python', '2D Platformer'],
+      image: './frostband.png',
+      github: 'https://github.com/ArmaanBudhiraja/Frostbound-run',
+    },
   ];
 
   return (
