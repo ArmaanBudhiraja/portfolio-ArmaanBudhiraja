@@ -52,6 +52,7 @@ export const Projects = () => {
       tags: ['React', 'NextJs', 'TypeScript', 'UI Library', 'Design Systems'],
       image: './A-UI.png',
       github: 'https://github.com/ArmaanBudhiraja/UI-Components',
+      liveDemo: 'https://ui-components-steel.vercel.app/',
     },
   ];
 
@@ -93,12 +94,14 @@ export const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  <Button variant="outline2" size="sm" className="gap-2" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                  </Button>
+                  {project.liveDemo && (
+                    <Button variant="outline2" size="sm" className="gap-2" asChild>
+                      <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </Card>
