@@ -46,6 +46,13 @@ export const Projects = () => {
       image: './ThinkPDF.png',
       github: 'https://github.com/ArmaanBudhiraja/smart-doc-assistant',
     },
+    {
+      title: 'A-UI',
+      description: 'A-UI is a user interface library that simplifies the process of building responsive and accessible web applications. The project emphasizes modular design, theming, and developer experience.',
+      tags: ['React', 'NextJs', 'TypeScript', 'UI Library', 'Design Systems'],
+      image: './A-UI.png',
+      github: 'https://github.com/ArmaanBudhiraja/UI-Components',
+    },
   ];
 
   return (
