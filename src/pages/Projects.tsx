@@ -93,6 +93,12 @@ export const Projects = () => {
                       Code
                     </a>
                   </Button>
+                  <Button variant="outline2" size="sm" className="gap-2" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  </Button>
                 </div>
               </div>
             </Card>
