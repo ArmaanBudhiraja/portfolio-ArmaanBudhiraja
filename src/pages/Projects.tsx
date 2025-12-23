@@ -39,6 +39,13 @@ export const Projects = () => {
       image: './frostband.png',
       github: 'https://github.com/ArmaanBudhiraja/Frostbound-run',
     },
+    {
+      title: 'ThinkPDF',
+      description: 'ThinkPDF is a document processing tool that leverages machine learning to extract and analyze data from PDF files. The project showcases advanced text recognition, data extraction, and user-friendly interfaces.',
+      tags: ['Python', 'Machine Learning', 'PDF Processing', 'NextJs'],
+      image: './ThinkPDF.png',
+      github: 'https://github.com/ArmaanBudhiraja/smart-doc-assistant',
+    },
   ];
 
   return (
