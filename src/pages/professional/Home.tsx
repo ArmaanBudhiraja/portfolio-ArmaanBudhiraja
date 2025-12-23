@@ -97,7 +97,7 @@ export const ProfessionalHome = () => {
             </a>
 
             <a
-              href="https://drive.google.com/file/d/15tL6vly8XfKcjXdydyDZRfeQBO4Yw19N/view?usp=sharing"
+              href="https://drive.google.com/file/d/1qThMlrVz0D8dsr1-6wjktj3goiY5UECC/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
