@@ -11,12 +11,12 @@ export const Skills = () => {
     {
       icon: <Server className="w-8 h-8" />,
       title: 'Backend Development',
-      skills: ['Node.js', 'SQL', 'MongoDB', 'REST APIs'],
+      skills: ['Node.js', 'Uvicorn', 'MongoDB', 'REST APIs'],
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: 'Database & Cloud',
-      skills: ['AWS', 'Google Cloud', 'Docker', 'Vercel'],
+      skills: ['AWS', 'Google Cloud', 'Docker', 'Vercel', 'Render'],
     },
     {
       icon: <Layout className="w-8 h-8" />,
@@ -26,12 +26,12 @@ export const Skills = () => {
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: 'Languages',
-      skills: ['Python','C','C++','Java','HTML','CSS','JavaScript','TypeScript','Bash/Shell Scripting'],
+      skills: ['Python','C','C++','Java','HTML','CSS','JavaScript','R','TypeScript','SQL','Bash/Shell Scripting'],
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Tools & Methodologies',
-      skills: ['Git','VSCode','PostgreSQL','Postman','Prisma'],
+      skills: ['Git','VSCode','PostgreSQL','Postman','Prisma','Matlab'],
     },
   ];
 
