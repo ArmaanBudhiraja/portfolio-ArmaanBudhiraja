@@ -5,6 +5,29 @@ import { ExternalLink, Github } from 'lucide-react';
 export const Projects = () => {
   const projects = [
     {
+      title: 'A-UI',
+      description: 'A-UI is a user interface library that simplifies the process of building responsive and accessible web applications. The project emphasizes modular design, theming, and developer experience.',
+      tags: ['React', 'NextJs', 'TypeScript', 'UI Library', 'Design Systems'],
+      image: './A-UI.png',
+      github: 'https://github.com/ArmaanBudhiraja/UI-Components',
+      liveDemo: 'https://ui-components-steel.vercel.app/',
+    },
+    {
+      title: 'Skin Disease Detection System',
+      description: 'Developed a computer vision system to analyze skin lesion images without labeled datasets or deep learning models. The system uses classical image processing techniques (OpenCV), feature extraction (GLCM, LBP, color histograms), and an SVM classifier to identify disease patterns. It also provides explainable heatmaps and similar case retrieval through a React + FastAPI web interface.',
+      tags: ['Python', 'Machine Learning', 'Computer Vision', 'Flask', 'Image Processing'],
+      image: './SkinDiseaseDetection.jpg',
+      github: 'https://github.com/ArmaanBudhiraja/Disease-Pattern-Discovery-in-Skin-Images-Without-Labels',
+      liveDemo: 'https://disease-pattern-discovery-in-skin-i.vercel.app/',
+    },
+    {
+      title: 'ThinkPDF',
+      description: 'ThinkPDF is a document processing tool that leverages machine learning to extract and analyze data from PDF files. The project showcases advanced text recognition, data extraction, and user-friendly interfaces.',
+      tags: ['Python', 'Machine Learning', 'PDF Processing', 'NextJs'],
+      image: './ThinkPDF.png',
+      github: 'https://github.com/ArmaanBudhiraja/smart-doc-assistant',
+    },
+    {
       title: 'E-Commerce Platform',
       description: 'A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.',
       tags: ['React', 'Node.js', 'PostgreSQL', 'Express'],
@@ -39,21 +62,8 @@ export const Projects = () => {
       image: './frostband.png',
       github: 'https://github.com/ArmaanBudhiraja/Frostbound-run',
     },
-    {
-      title: 'ThinkPDF',
-      description: 'ThinkPDF is a document processing tool that leverages machine learning to extract and analyze data from PDF files. The project showcases advanced text recognition, data extraction, and user-friendly interfaces.',
-      tags: ['Python', 'Machine Learning', 'PDF Processing', 'NextJs'],
-      image: './ThinkPDF.png',
-      github: 'https://github.com/ArmaanBudhiraja/smart-doc-assistant',
-    },
-    {
-      title: 'A-UI',
-      description: 'A-UI is a user interface library that simplifies the process of building responsive and accessible web applications. The project emphasizes modular design, theming, and developer experience.',
-      tags: ['React', 'NextJs', 'TypeScript', 'UI Library', 'Design Systems'],
-      image: './A-UI.png',
-      github: 'https://github.com/ArmaanBudhiraja/UI-Components',
-      liveDemo: 'https://ui-components-steel.vercel.app/',
-    },
+    
+    
   ];
 
   return (
